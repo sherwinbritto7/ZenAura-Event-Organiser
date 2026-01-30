@@ -1,5 +1,5 @@
 import { ClerkProvider } from "@clerk/nextjs";
-import Header from "@/components/header";
+import Header from "../components/header";
 import "./globals.css";
 import { dark } from "@clerk/themes";
 import { ThemeProvider } from "@/components/theme-provider";
