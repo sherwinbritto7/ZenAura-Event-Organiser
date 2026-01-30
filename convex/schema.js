@@ -17,7 +17,7 @@ export default defineSchema({
         city: v.string(),
         state: v.optional(v.string()),
         country: v.string(),
-      })
+      }),
     ),
 
     interests: v.optional(v.array(v.string())), //Min 3 categories
@@ -37,7 +37,7 @@ export default defineSchema({
 
     //Organizer
     organizerId: v.id("users"),
-    organizername: v.string(),
+    organizerName: v.string(),
 
     //Event Details
     category: v.string(),
@@ -54,6 +54,7 @@ export default defineSchema({
     address: v.optional(v.string()),
     city: v.string(),
     state: v.optional(v.string()),
+    country: v.string(),
 
     //Capacity & Ticketing
     capacity: v.number(),
@@ -62,7 +63,7 @@ export default defineSchema({
     registrationCount: v.number(),
 
     //Customization
-    coverImg: v.optional(v.string()),
+    coverImage: v.optional(v.string()),
     themeColor: v.optional(v.string()),
 
     //Timestamps
@@ -75,7 +76,7 @@ export default defineSchema({
     .index("by_slug", ["slug"])
     .searchIndex("search_title", { searchField: "title" }),
 
-  resgistrations: defineTable({
+  registrations: defineTable({
     eventId: v.id("events"),
     userId: v.id("users"),
 
